@@ -5,6 +5,10 @@ set smartindent
 set smarttab
 set undofile
 
+nmap - <C-o>
+nmap + <C-i>
+nmap , <C-o>
+nmap ; <C-i>
 imap <C-h> <C-o>:tabp<cr>
 imap <C-l> <C-o>:tabn<cr>
 nmap <C-h> :tabp<cr>
@@ -36,6 +40,12 @@ imap <C-space> <C-p>
 imap <S-space> <C-p>
 tmap <C-q> <C-\><C-n>
 nnoremap <C-s> :%s/\<<C-r><C-w>\>//g<Left><Left>
+nmap <C-j>p o"TODO: \n" puts<esc>_Wi
+nmap <C-j># o"TODO: " #<esc>_Wi
+nmap <C-j>i o# "TODO: "<esc>$i
+nmap <C-k>p o"\n" puts<esc>_li
+nmap <C-k># o"" #<esc>_li
+nmap <C-k>i o# ""<esc>$i
 
 syntax on
 colorscheme pablo
@@ -45,11 +55,8 @@ hi TabLineSel ctermfg=white ctermbg=black
 hi VertSplit ctermbg=blue ctermfg=blue
 hi StatusLineNC ctermbg=black ctermfg=blue
 hi StatusLine ctermbg=white ctermfg=black
-hi Visual ctermfg=black ctermbg=lightblue
+hi Visual ctermbg=black ctermfg=lightblue cterm=reverse
 
 let @m="yypk_vEr wv$r-hr+$a+\<esc>yyjp0R +\<esc>lvwhr-k_Whr|$a|\<esc>q"
 let @t="j/|\<CR>Nll"
 let @z="/|\<CR>ll"
-
-silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-silent !xmodmap -e 'keycode 0x69 = Escape'

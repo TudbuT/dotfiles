@@ -212,6 +212,7 @@ bar {
 exec feh --bg-fill bg
 exec dunst
 exec clipit
+exec xmodmap -e 'keycode 118 = Multi_key'
 exec xmodmap -e 'keycode 134 = Multi_key'
 exec xmodmap -e 'remove mod4 = Multi_key'
 exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

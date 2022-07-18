@@ -49,3 +49,6 @@ hi Visual ctermbg=black ctermfg=lightblue cterm=reverse
 let @m="yypk_vEr wv$r-hr+$a+\<esc>yyjp0R +\<esc>lvwhr-k_Whr|$a|\<esc>q"
 let @t="j/|\<CR>Nll"
 let @z="/|\<CR>ll"
+
+silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+silent !xmodmap -e 'keycode 0x69 = Escape'

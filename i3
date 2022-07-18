@@ -168,6 +168,7 @@ bindsym $mod+Control+0 move container to workspace number $ws10
 bindsym $mod+Tab move scratchpad
 bindsym Mod1+q scratchpad show
 bindsym Mod1+Tab exec rofi -show
+bindsym Mod1+x exec rofi -show run
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

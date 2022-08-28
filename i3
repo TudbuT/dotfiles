@@ -65,9 +65,10 @@ bindsym $mod+b exec qutebrowser
 bindsym $mod+d exec discord
 bindsym $mod+o exec pcmanfm
 bindsym $mod+a exec atlauncher
-bindsym $mod+n exec arduino
+bindsym $mod+n exec neovide .
+bindsym $mod+s exec neovide
+bindsym $mod+i exec jetbrains-toolbox
 bindsym $mod+p exec pavucontrol
-bindsym $mod+s exec ~/edit.js
 bindsym $mod+l exec ssh -XY p@localhost -C chromium
 
 # start dmenu (a program launcher)
@@ -211,8 +212,10 @@ bar {
 
 exec feh --bg-fill bg
 exec dunst
-exec clipit
+exec sh -c "(sleep 5 ; clipit) & exit"
+exec pulseaudio
 exec xmodmap -e 'keycode 134 = Multi_key'
 exec xmodmap -e 'remove mod4 = Multi_key'
 exec xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 exec xmodmap -e 'keycode 0x69 = Escape'
+exec xmodmap -e 'keycode 118 = Multi_key'

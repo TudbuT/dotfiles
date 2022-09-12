@@ -145,6 +145,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/scratch.vim'
 Plug 'tudbut/floaty.nvim'
 Plug 'airblade/vim-gitgutter'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
@@ -166,11 +167,11 @@ nmap gwN <Plug>(GitGutterPrevHunk)
 nmap gws <Plug>(GitGutterStageHunk)
 
 " abbreviations
-abbrev fori <esc>B"0dWafor(int i = 0; i < <esc>"0pxa; i++) {<CR>}<esc>kA
-abbrev psvm public static void main(String[] args) {<CR>}<esc>O
-abbrev foreach <esc>B"0dWafor(int i = 0; <esc>"0pxa.hasNext(); i++) {<CR>}<esc>kA
-abbrev sout <esc>B"0dWaSystem.out.println(<esc>"0pxa);
-abbrev serr <esc>B"0dWaSystem.err.println(<esc>"0pxa);
-abbrev ifn <esc>B"0dWaif(<esc>"0pxa == null) {<CR>}<esc>kA
-abbrev ifnn <esc>B"0dWaif(<esc>"0pxa != null) {<CR>}<esc>kA
+"abbrev fori <esc>B"0dWafor(int i = 0; i < <esc>"0pxa; i++) {<CR>}<esc>kA
+"abbrev psvm public static void main(String[] args) {<CR>}<esc>O
+"abbrev foreach <esc>B"0dWafor(int i = 0; <esc>"0pxa.hasNext(); i++) {<CR>}<esc>kA
+"abbrev sout <esc>B"0dWaSystem.out.println(<esc>"0pxa);
+"abbrev serr <esc>B"0dWaSystem.err.println(<esc>"0pxa);
+"abbrev ifn <esc>B"0dWaif(<esc>"0pxa == null) {<CR>}<esc>kA
+"abbrev ifnn <esc>B"0dWaif(<esc>"0pxa != null) {<CR>}<esc>kA
 

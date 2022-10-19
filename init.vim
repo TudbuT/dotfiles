@@ -6,7 +6,7 @@ set smartindent
 set smarttab
 set undofile
 set relativenumber
-set textwidth=100
+set textwidth=90
 set signcolumn=yes
 
 inoremap <C-h> <C-o>gT
@@ -31,8 +31,7 @@ nmap UH <esc>:match Chars //<cr>:hi Chars ctermbg=236 guibg=#262626<cr>
 nmap UW :FS<CR>:term sh -c "cp ~/.vimrc ~/Schule/IT/.vimrc ; cp ~/.config/nvim/init.vim ~/Schule/IT/init.vim ; echo COPIED ; ~/Schule/update ; cp ~/Schule/IT/.vimrc ~/.vimrc ; cp ~/Schule/IT/init.vim ~/.config/nvim/init.vim ; echo DONE"<cr><C-w><C-w>
 nmap UQ! :silent !systemctl suspend<cr>
 nmap U :set nohlsearch<cr>
-nmap UU :set nohlsearch<cr>
-nmap UI :set hlsearch<cr>
+nmap UU :nohl<cr>
 imap <C-z> <C-o>ZS
 imap <C-c> <C-o>@t
 imap <C-x> <C-o>@z
@@ -72,6 +71,13 @@ nmap J }
 nmap K {
 nmap ' `
 
+vmap ( "9di()<esc>"9P
+vmap [ "9di[]<esc>"9P
+vmap { "9di{}<esc>"9P
+imap ( ()<left>
+imap [ []<left>
+vmap gA :EasyAlign 
+nmap gA :EasyAlign 
 
 " coc
 nmap <silent> gd <Plug>(coc-definition)
@@ -146,6 +152,7 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'tudbut/floaty.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 silent !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'

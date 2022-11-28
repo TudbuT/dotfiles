@@ -8,6 +8,7 @@ set undofile
 set relativenumber
 set textwidth=90
 set signcolumn=yes
+set nowrap
 
 inoremap <C-h> <C-o>gT
 inoremap <C-l> <C-o>gt
@@ -82,8 +83,8 @@ nmap gA :EasyAlign
 " coc
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gD gc<Plug>(coc-definition)
-nmap <silent> gi gc<Plug>(coc-references)
-nmap <silent> gI gc<Plug>(coc-implementation)
+nmap <silent> gi <Plug>(coc-references)
+nmap <silent> gI <Plug>(coc-implementation)
 nmap <silent> gF <Plug>(coc-fix-current)
 nmap gr <Plug>(coc-rename)
 nmap <silent> gf <Plug>(coc-codeaction-selected)l
@@ -175,7 +176,7 @@ nmap gws <Plug>(GitGutterStageHunk)
 
 " abbreviations
 "abbrev fori <esc>B"0dWafor(int i = 0; i < <esc>"0pxa; i++) {<CR>}<esc>kA
-"abbrev psvm public static void main(String[] args) {<CR>}<esc>O
+abbrev psvm public static void main(String[<right> args<right> {<CR>}<esc>O
 "abbrev foreach <esc>B"0dWafor(int i = 0; <esc>"0pxa.hasNext(); i++) {<CR>}<esc>kA
 "abbrev sout <esc>B"0dWaSystem.out.println(<esc>"0pxa);
 "abbrev serr <esc>B"0dWaSystem.err.println(<esc>"0pxa);

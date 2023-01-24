@@ -29,7 +29,7 @@ nmap UM :set mouse=a<cr>
 nmap UN :set mouse=<cr>
 nmap US <esc>:match Chars /./<cr>:hi Chars ctermbg=236 guibg=#262626<cr>
 nmap UH <esc>:match Chars //<cr>:hi Chars ctermbg=236 guibg=#262626<cr>
-nmap UW :FS<CR>:term sh -c "cp ~/.vimrc ~/Schule/IT/.vimrc ; cp ~/.config/nvim/init.vim ~/Schule/IT/init.vim ; echo COPIED ; ~/Schule/update ; cp ~/Schule/IT/.vimrc ~/.vimrc ; cp ~/Schule/IT/init.vim ~/.config/nvim/init.vim ; echo DONE"<cr><C-w><C-w>
+nmap UW :FS<CR>:term sh -c "cp ~/.vimrc ~/Schule/IT/.vimrc ; cp ~/.config/nvim/init.vim ~/Schule/IT/init.vim ; echo COPIED ; ~/Schule/update ; cp ~/Schule/IT/.vimrc ~/.vimrc ; cp ~/Schule/IT/init.vim ~/.config/nvim/init.vim ; echo DONE"<cr><cr>
 nmap UQ! :silent !systemctl suspend<cr>
 nmap U :set nohlsearch<cr>
 nmap UU :nohl<cr>
@@ -127,7 +127,7 @@ hi CocInfoSign guibg=#262626
 hi CocErrorSign guibg=#602020
 hi CocErrorFloat guibg=#4e4e4e guifg=#ff0000
 hi CocWarningSign guibg=#382818
-hi Normal guifg=#dddddd guibg=#1d1f21
+hi Normal ctermbg=234 guifg=#dddddd guibg=#1d1f21
 hi Pmenu guibg=#800080 ctermbg=darkmagenta ctermfg=0 guifg=#dddddd
 hi PmenuSel guibg=#13345a ctermbg=109 ctermfg=0 guifg=#dddddd
 hi Special guifg=#4080ff
@@ -136,10 +136,6 @@ set guifont=Fira_Code:h10 " == === ->-->-<->- <---->
 if exists("g:neovide")
     let g:neovide_scroll_animation_length=0.4
 endif
-
-let @m="yypk_vEr wv$r-hr+$a+\<esc>yyjp0R +\<esc>lvwhr-k_Whr|$a|\<esc>q"
-let @t="j/|\<CR>Nll"
-let @z="/|\<CR>ll"
 
 call plug#begin()
 Plug 'rust-lang/rust.vim'
